@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "cleanmarl"
+version = "0.0.1"
+authors = [
+  { name="Amine Andam", email="andamamine83@gmail.com" },
+]
+description = "Single file implementations of Deep Multi-Agent Reinforcement Learning algorithms"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "tensorboard==2.20.0",
+    "wandb==0.21.1",
+    "gymnasium==1.2.1",
+    "torch==2.9.0",
+    "tyro==0.9.35",
+    "numpy==2.3.4",
+    "jax===0.7.1",
+    "flax==0.12.0",
+    "optax==0.2.6",
+    "chex==0.1.91",
+    "pettingzoo==1.25.0",
+    "lbforaging==2.0.0",
+    "smaclite @ git+https://github.com/uoe-agents/smaclite",
+]
+
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICENSE*"]
+
+[project.urls]
+Homepage = "https://cleanmarl-docs.readthedocs.io/en/latest/"
+
+[tool.setuptools.packages.find]
+include = ["cleanmarl*"]
